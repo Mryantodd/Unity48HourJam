@@ -1,3 +1,13 @@
+/// The following script is the meat and potatoes of the show. In this file I declare all of my object  classes. As well as their XML 
+// objects.
+// I will at some point break these class deffinitions into their own files. I wrote all in this document side by side while designing
+// my XML as well. I made use of collapse to make navigation easier. 
+
+
+/// SKIP TO LINE # 735....  Everything up to that point is class declaration and XML import export methods.
+/// Line # 735 is where the main class that lives on the XMLObject in the unity scene.
+/// Again due to time crunch, I am leaving the file as was at submission time. 
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -726,6 +736,18 @@ public class CharacterContainer
         return serializer.Deserialize(new StringReader(text)) as CharacterContainer;
     }
 }
+// This is the main class file for the XMLObject in game. 
+// From here we use the above building blocks to define the in game character objects
+// We also load our internally stored XML files through text assets with sample data set.
+// If during start up we don't detect the required files. We will write the sample data files.
+// Thus bypassing the need to manually place these files prior to running the project.
+// These files contain all the basic information needed to create every reference object.
+// With this system you can easily add and remove any piece of character data you like.
+// Adapting the below code you could implement any stat system you like. My application focuses on VTM
+// as such the naming and scheme is defined to match. A similar approach could be used to design custom
+// character data tools on the fly. Sharing between two instances of the application should remain 
+// compatible until XML options are modified. Something that will require version checking on the reference xml files
+// to avoid null exception. If loading a character shared by someone with new modified refrence values.
 
 public class XMLSerializerScript : MonoBehaviour
 {
