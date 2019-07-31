@@ -1,4 +1,7 @@
-﻿using System.Collections;
+/// The following script defines a new GameObject type class of MonoBehaviour type. It is attached to the UI element 
+/// Its sole purpose is to represent the character from our character list UI area. As well as act as a pass through for
+// loading the appropriate object into view.
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
