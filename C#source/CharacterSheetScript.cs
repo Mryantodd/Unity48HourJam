@@ -1,4 +1,15 @@
-﻿using System.Collections;
+/// This script enforces the base logic for creating characters for Vampire The Masquerade: A White Wolf Production.
+/// I do not own the rights to any of the source material. Images and other IP related content have not been included outside of my 
+/// example build. This is also the reason I do not include project files outside of scripting I wrote.
+
+/// This script is in a state of 90% complete. The character creation logic ends at the free point and optional/DM related approval
+/// steps. There is also I believe a missing logic check I did not get to. In specific conditions it is possible
+/// to break the point allocation phase. For showcase purposes I have added general notation and full notation depending on file size.
+/// this project was part of a Unity Answers 48 Hour community challenge. As such I am leaving it in its submission state.
+/// as such there was no commenting on submission. I will add this over time so that without watching the
+/// build video(unavailable as of 10.21.2015) you might make sense of the logic flow below.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Xml;
